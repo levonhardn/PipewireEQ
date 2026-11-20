@@ -1,30 +1,14 @@
-# This is an example PKGBUILD file. Use this as a start to creating your own,
-# and remove these comments. For more information, see 'man PKGBUILD'.
-# NOTE: Please fill out the license field for your package! If it is unknown,
-# then please put 'unknown'.
-
-# Guidelines specific to Bazaar, Git, Mercurial and Subversion packages.
-# Other VCS sources are not natively supported by makepkg yet.
-
-# Maintainer: Your Name <youremail@domain.com>
-pkgname=NAME-VCS # '-bzr', '-git', '-hg' or '-svn'
-pkgver=VERSION
+# Maintainer: levonhardn <levonhardn@gmail.com>
+pkgname='PipewireEQ'
+pkgver=1.0
 pkgrel=1
-pkgdesc=""
-arch=()
-url=""
-license=('GPL')
-groups=()
-depends=()
-makedepends=('VCS_PACKAGE') # 'bzr', 'git', 'mercurial' or 'subversion'
-provides=("${pkgname%-VCS}")
-conflicts=("${pkgname%-VCS}")
-replaces=()
-backup=()
-options=()
-install=
-source=('FOLDER::VCS+URL#FRAGMENT')
-noextract=()
+pkgdesc="GUI audio equalizer using pipewire"
+arch=('x86_64')
+url="https://github.com/levonhardn/PipewireEQ"
+license=('GPL-3.0-only')
+depends=('pipewire', 'pipewire-pulse', 'wireplumber')
+makedepends=('git')
+source=('PipewireEQ::git://github.com/levonhardn/PipewireEQ.git')
 sha256sums=('SKIP')
 
 # Please refer to the 'USING VCS SOURCES' section of the PKGBUILD man page for
